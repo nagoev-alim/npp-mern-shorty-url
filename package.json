@@ -1,15 +1,13 @@
 {
   "name": "npp-mern-shorty",
   "version": "1.0.0",
-  "description": "In this app you can shorten URL, and store for yourself.",
+  "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node api/index.js",
-    "dev-server": "nodemon api/index.js",
-    "dev-client": "npm run dev --prefix client",
-    "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
-    "postbuild": "npm install --prefix api && npm install --prefix client && npm run build --prefix client"
+    "start": "npm run start --prefix api",
+    "server": "npm run server --prefix api",
+    "dev": "concurrently \"cd api && npm run server\" \"cd client && npm run dev\"",
+    "postbuild": "npm install && npm install --prefix api && npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [
     "mern",
@@ -21,20 +19,6 @@
   "author": "Alim Nagoev | https://github.com/nagoev-alim",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^7.6.0",
-    "nodemon": "^2.0.21"
-  },
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.20.2",
-    "colors": "^1.4.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "joi": "^17.8.3",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.0.1",
-    "nodemailer": "^6.9.1"
+    "concurrently": "^7.6.0"
   }
 }
-
