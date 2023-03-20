@@ -315,5 +315,8 @@ $RECYCLE.BIN/
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 /**/.idea/*
 package-lock.json
-
 _sandbox
+
+# GoalSetterMERN
+# MONGO_URI=mongodb://0.0.0.0:27017/goalsetter_db
+# JWT_SECRET=nagoev

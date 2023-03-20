@@ -28,8 +28,8 @@ app.use('/', router);
 
 // Настройка продакшена
 if (configuration.env === 'production') {
-  app.use(express.static(path.join(__dirname, '../../client/dist')));
-  app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, '../', '../', 'client', 'dist', 'index.html')));
+  app.use(express.static(path.join(__dirname, '../client/dist')));
+  app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, '../', 'client', 'dist', 'index.html')));
 } else {
   app.get('/', (req, res) => res.send('Please set to production'));
 }
